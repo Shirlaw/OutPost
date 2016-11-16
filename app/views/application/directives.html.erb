@@ -1,0 +1,24 @@
+<h1>Directives</h1>
+
+<!-- <div id="container">
+  Name: <input type="text" ng-model='employee-name'> {{ employee-name }}
+</div> -->
+
+<div id="list-container" ng-init="names=['James', 'Shawn', 'Youn', 'Barrett', 'Greg']">
+  <ul>
+    <li ng-repeat="name in names">{{ name }}</li>
+  </ul>
+</div>
+
+<div id="employees" ng-init="employees=[
+  {name: 'James Shirlaw', city: 'Singapore'},
+  {name: 'Shawn Jung', city: 'Korea'},
+  {name: 'Youn Oh', city: 'Korea'},
+  {name: 'Greg Laughlin', city: 'Canada'},
+  {name: 'Barrett Stutzman', city: 'America'}
+  ]">
+  <input type="text" ng-model="city">
+  <ul>
+    <li ng-repeat='employee in employees | filter:city'>{{ employee.name }} - {{ employee.city }}</li>
+  </ul>
+</div>
